@@ -9,7 +9,7 @@ export abstract class Listener<T extends Event> {
   abstract subject: T["subject"];
   abstract queueGroupName: string;
   abstract onMessage(data: T["data"], msg: Message): void;
-  private client: Stan;
+  protected client: Stan;
   //wait for 5s
   protected ackWait = 5 * 1000;
   constructor(client: Stan) {
@@ -60,5 +60,3 @@ export abstract class Listener<T extends Event> {
         JSON.parse(data.toString("utf8"));
   }
 }
-
-
