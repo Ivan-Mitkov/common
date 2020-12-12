@@ -21,3 +21,4 @@ export * from "./events/base-publisher";
 export * from "./events/base-listener";
 
 export * from "./events/types/order-status";
+export * from "./events/payment-created-event";
